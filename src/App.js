@@ -1,32 +1,29 @@
 import React from 'react';
-import './App.css'; 
-
-// 1. Importar los componentes a mostrar
-//import LoginPage from './components/LoginPage'; 
-import HabitacionList from './components/HabitacionList'; 
+import './App.css';
+import RegisterPage from './components/RegisterPage';
+import LoginPage from './components/LoginPage';
+import ClienteCRUD from './components/ClienteCRUD';
 
 function App() {
-  // 2. En el return, definir la estructura de la página
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Mi Sistema de Gestión de Alojamiento</h1>
+        <h1>Frontend de Alojamiento</h1>
       </header>
-
       <main>
-        {/* {}
-        <LoginPage /> */}
-
-        {/* Añadimos una línea divisoria para separar visualmente */}
+        <div style={{ display: 'flex', justifyContent: 'space-around', padding: '20px' }}>
+          <div style={{ border: '1px solid #ccc', padding: '20px' }}>
+            <RegisterPage />
+          </div>
+          <div style={{ border: '1px solid #ccc', padding: '20px' }}>
+            <LoginPage />
+          </div>
+        </div>
         <hr />
-
-        {/* Mostramos el componente de la lista de habitaciones */}
-        <HabitacionList />
+        <div style={{ padding: '20px' }}>
+          <ClienteCRUD />
+        </div>
       </main>
-
-      <footer className="App-footer">
-        <p>Proyecto de Alojamiento - 2025</p>
-      </footer>
     </div>
   );
 }
